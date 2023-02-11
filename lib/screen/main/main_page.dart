@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_1/screen/home/home_page.dart';
 import 'package:sneakers_1/widgets/sneaker_app_bar.dart';
 import 'package:sneakers_1/widgets/square_icon_button.dart';
 
@@ -6,7 +7,6 @@ class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
   // static const routeName = '/';
-  // static const pages = [];
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -14,6 +14,9 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedNavbar = 0;
+  int state = 0;
+
+  static const pages = [HomePage()];
 
   void _changeSelectedNavBar(int index) {
     setState(() {
@@ -38,15 +41,9 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
-        // body: pages[state],
-        body: Center(
-          child: Text("Tab Index yang aktif : $_selectedNavbar", style: TextStyle(fontSize: 16)),
-        ),
+        body: pages[state],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedNavbar,
-          // selectedItemColor: Colors.pink,
-          // unselectedItemColor: Colors.grey,
-          // showUnselectedLabels: true,
           onTap: _changeSelectedNavBar,
           items: const [
             BottomNavigationBarItem(

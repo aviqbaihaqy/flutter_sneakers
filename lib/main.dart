@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_1/core/theme/custom_theme_data.dart';
-import 'package:sneakers_1/screen/main_page.dart';
+import 'package:sneakers_1/screen/main/main_page.dart';
 
 void main() {
   runApp(const MainApp());
