@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_1/core/routes/routes.dart';
 import 'package:sneakers_1/core/theme/custom_theme_data.dart';
 import 'package:sneakers_1/screen/main/main_page.dart';
 
@@ -16,6 +17,7 @@ class MainApp extends StatelessWidget {
       home: const MainPage(),
       theme: CustomThemeData.light,
       // theme: ThemeData.light(useMaterial3: false),
+      onGenerateRoute: Routes.onGenerate,
     );
   }
 }

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:sneakers_1/domain/entities/sneaker.dart';
+import 'package:sneakers_1/screen/sneaker_details/sneaker_details_page.dart';
 import 'package:sneakers_1/widgets/dynamic_ink_well.dart';
 import 'package:sneakers_1/widgets/hero_color.dart';
 import 'package:sneakers_1/widgets/hero_image.dart';
@@ -28,11 +29,11 @@ class SneakerCard extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16),
           child: DynamicInkWell(
             onTap: () {
-              // Navigator.pushNamed(
-              //   context,
-              //   SneakerDetailsPage.routeName,
-              //   arguments: sneaker,
-              // );
+              Navigator.pushNamed(
+                context,
+                SneakerDetailsPage.routeName,
+                arguments: sneaker,
+              );
             },
             child: (tappedDown) => Transform(
               transform: Matrix4.identity()
@@ -101,11 +102,11 @@ class SneakerCard extends StatelessWidget {
           bottom: 32,
           child: DynamicInkWell(
             onTap: () {
-              // Navigator.pushNamed(
-              //   context,
-              //   SneakerDetailsPage.routeName,
-              //   arguments: sneaker,
-              // );
+              Navigator.pushNamed(
+                context,
+                SneakerDetailsPage.routeName,
+                arguments: sneaker,
+              );
             },
             child: (tappedDown) => HeroImage(
               tag: '${sneaker.id}image',

@@ -6,7 +6,7 @@ import 'package:sneakers_1/widgets/square_icon_button.dart';
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
-  // static const routeName = '/';
+  static const routeName = '/';
 
   @override
   State<MainPage> createState() => _MainPageState();

@@ -7,6 +7,8 @@ import 'package:sneakers_1/widgets/navigation_page.dart';
 class HomePage extends NavigationPage {
   const HomePage({Key? key}) : super(icon: Icons.home_outlined, key: key);
 
+  static const routeName = '/home';
+
   @override
   State<HomePage> createState() => _HomePageState();
 }

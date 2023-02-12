@@ -1,5 +1,5 @@
 extension DoubleExt on double {
-  String toCurrency({sign = '\$'}) {
+  String toCurrency({sign = '\Rp.'}) {
     return '$sign${toStringAsFixed(2)}';
   }
 

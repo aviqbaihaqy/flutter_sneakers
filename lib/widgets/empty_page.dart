@@ -11,6 +11,15 @@ class EmptyPage extends NavigationPage {
   final String title;
 
   @override
+  State<EmptyPage> createState() => _EmptyPageState(icon, title);
+}
+
+class _EmptyPageState extends State<EmptyPage> {
+  _EmptyPageState(IconData icon, String title);
+  IconData? icon;
+  String? title;
+
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
@@ -22,7 +31,7 @@ class EmptyPage extends NavigationPage {
           ),
           const SizedBox(width: 8),
           Text(
-            title,
+            title!,
             style: const TextStyle(fontSize: 18),
           ),
         ],
